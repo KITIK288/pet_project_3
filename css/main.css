@@ -1,0 +1,185 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e9ecef;
+    color: #343a40;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Использование полной высоты окна */
+}
+
+.container {
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 40px; /* Увеличен отступ внутри контейнера */
+    text-align: center;
+    width: 400px; /* Ширина контейнера */
+}
+
+h1 {
+    margin-bottom: 25px; /* Увеличен отступ между заголовком и следующим элементом */
+    font-size: 26px; /* Можно сделать заголовок чуть больше */
+    color: #007bff; /* Цвет заголовка */
+}
+
+p {
+    margin-bottom: 20px; /* Увеличен отступ между параграфом и следующим элементом */
+    font-size: 16px;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 12px; /* Увеличен отступ внутри поля ввода */
+    margin-bottom: 25px; /* Увеличен отступ между полем ввода и кнопкой */
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+input[type="number"]:focus {
+    border-color: #0056b3; /* Темно-синий при фокусе */
+    outline: none; /* Убираем стандартный контур */
+}
+
+.result-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 12px; /* Увеличен отступ внутри кнопки */
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+.result-button:hover {
+    background-color: #0056b3; /* Тень при наведении */
+}
+
+.input {
+    margin-top: 25px; /* Увеличен отступ между кнопкой и полем вывода */
+    font-size: 18px;
+    font-weight: bold;
+    color: #343a40;
+    padding: 15px; /* Увеличен отступ внутри поля вывода */
+    border: 2px solid #007bff; /* Заменен стиль рамки на зеленый */
+    border-radius: 5px;
+    min-height: 40px; /* Минимальная высота для состояния без текста */
+    background: #f8f9fa; /* Добавлен легкий фон для поля вывода */
+}
+
+.check1 {
+    margin-top: 25px; /* Увеличен отступ между кнопкой и полем вывода */
+    font-size: 18px;
+    font-weight: bold;
+    color: #343a40;
+    padding: 15px; /* Увеличен отступ внутри поля вывода */
+    border: 2px solid #007bff; /* Заменен стиль рамки на зеленый */
+    border-radius: 5px;
+    min-height: 40px; /* Минимальная высота для состояния без текста */
+    background: #f8f9fa; /* Добавлен легкий фон для поля вывода */
+}
+
+h2 {
+    margin-top: 25px;
+}
+
+.theme-button {
+    position: absolute; /* Размещаем кнопку в верхней части страницы */
+    top: 64px;
+    right: 20px;
+}
+
+.theme-button button {
+    background-color: #007bff; /* Цвет кнопки */
+    color: white; /* Цвет текста */
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.theme-button button:hover {
+    background-color: #0056b3; /* Цвет кнопки при наведении */
+}
+
+.modal {
+    display: none; /* Скрыто по умолчанию */
+    position: fixed; /* Остается на одном месте */
+    z-index: 1; /* Сзади */
+    left: 0;
+    top: 0;
+    width: 100%; /* Полная ширина */
+    height: 100%; /* Полная высота */
+    overflow: auto; /* Если нужно прокрутка */
+    background-color: rgb(0,0,0); /* Цвет фона */
+    background-color: rgba(0,0,0,0.4); /* Черный с прозрачностью */
+}
+
+.modal-content {
+    text-align: center;
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% сверху и по центру */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%; /* Ширина */
+    border-radius: 20px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.input {
+    position: relative; /* Ставим относительное позиционирование для родителя */
+    padding: 10px; /* Отступы вокруг текста */
+    border: 1px solid #ccc; /* Рамка */
+    border-radius: 5px; /* Закругленные углы */
+    background-color: #f9f9f9; /* Цвет фона */
+    display: flex; /* Используем flexbox для выравнивания элементов */
+    align-items: center; /* Вертикальное выравнивание */
+}
+
+.copy-button {
+    position: absolute; /* Абсолютное позиционирование для кнопки */
+    top: 5px; /* Отступ сверху */
+    right: 5px; /* Отступ справа */
+    background-color: #007bff; /* Синий цвет фона */
+    border: none; /* Без рамки */
+    color: white; /* Белый цвет текста */
+    padding: 5px 8px; /* Отступы */
+    font-size: 14px; /* Размер шрифта */
+    cursor: pointer; /* Указатель при наведении */
+    border-radius: 3px; /* Закругленные углы */
+    transition: background-color 0.3s; /* Плавный переход при наведении */
+    display: none; /* По умолчанию скрыта */
+}
+
+.copy-button:hover {
+    background-color: #0056b3; /* Темнее синий при наведении */
+}
+
+.unik {
+    margin-top: 25px;
+}
