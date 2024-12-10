@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/main.css">
+    <title>Онлайн генератор пароля</title>
+</head>
+<body>
+<div class="modal" id="myModal">
+    <div class="modal-content">
+        <span class="close" id="modalClose">&times;</span>
+        <h2>Мой Github</h2>
+        <a href="https://github.com/KITIK288">
+            <p class="unik">"https://github.com/KITIK288"</p>
+        </a>
+    </div>
+</div>
+
+<div class="theme-button">
+    <button id="themeToggle">İ</button>
+</div>
+<div class="container">
+    <h1>Генератор пароля</h1>
+    <p>Введите длину символов</p>
+    <input id="result" type="number" min="1" placeholder="длинна пароля">
+    <button class="result-button" onclick="password_generation_terminal()">Сгенерировать пароль</button>
+    <h2>Ваш пароль</h2>
+    <div class="input" id="input">
+        <span id="generatedPassword"></span>
+        <button id="copyButton" class="copy-button" onclick="copyPassword()" style="display:none;">К</button>
+    </div>
+    <h2>Оценка безопасности пароля</h2>
+    <div class="check1" id="check1"></div>
+    <div class="check1" id="check2"></div>
+    <div class="check1" id="check3"></div>
+</div>
+<script src="../js/main.js"></script>
+</body>
+</html>
